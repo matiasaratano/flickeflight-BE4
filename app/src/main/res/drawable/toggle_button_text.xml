@@ -1,0 +1,5 @@
+<!-- toggle_button_text.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:color="@android:color/white" /> <!-- Color de texto cuando está seleccionado -->
+    <item android:state_checked="false" android:color="@android:color/black" /> <!-- Color de texto cuando no está seleccionado -->
+</selector>
