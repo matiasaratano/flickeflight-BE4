@@ -2,16 +2,12 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navgraph"
-    app:startDestination="@id/bottom_bar_offers">
+    android:id="@+id/action_navgraph"
+    app:startDestination="@id/offerFragment">
+
     <fragment
-        android:id="@+id/bottom_bar_offers"
+        android:id="@+id/offerFragment"
         android:name="com.manadigital.recyclerview1.fragments.OfferFragment"
         android:label="fragment_offer"
         tools:layout="@layout/fragment_offer" />
-    <fragment
-        android:id="@+id/bottom_bar_explore"
-        android:name="com.manadigital.recyclerview1.fragments.PruebaFragment"
-        android:label="PruebaFragment"
-        tools:layout="@layout/layoutprueba"/>
 </navigation>

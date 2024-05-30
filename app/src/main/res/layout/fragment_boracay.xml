@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.BoracayFragment">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo_boracay"
+        app:layout_constraintHeight_percent="0.60"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/roundedLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_top_corners"
+        android:orientation="vertical"
+        app:layout_constraintHeight_percent="0.88"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boracay"
+                android:textStyle="bold"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$349"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Philippines"
+            android:textColor="#808080"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="1dp" />
+
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overview"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spend 5 days and 4 nights in one of the best islands in the world! Bask in the sun while walking in the white sand beach and enjoy the night partying at the popular seaside bars."
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:id="@+id/photos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photos"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/image_carousel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"/>
+
+        <Button
+            android:id="@+id/book_now_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Now"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_boracay_background"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fab_left"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/circle_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_arrow_back_24" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fab_right"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="25dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/circle_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/heartImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/heart_selector" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
