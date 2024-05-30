@@ -1,0 +1,6 @@
+<!-- rounded_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="18dp" /> <!-- Ajusta este valor según la curvatura que desees -->
+    <solid android:color="@android:color/white" /> <!-- Color de fondo del contenedor -->
+</shape>

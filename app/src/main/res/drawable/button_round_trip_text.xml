@@ -1,0 +1,5 @@
+<!-- button_round_trip_text.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:color="@android:color/white" /> <!-- Color de texto cuando está presionado -->
+    <item android:color="@android:color/black" /> <!-- Color de texto predeterminado -->
+</selector>

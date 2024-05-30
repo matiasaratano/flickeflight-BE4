@@ -1,0 +1,15 @@
+<!-- toggle_button_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp" /> <!-- Radio de las esquinas -->
+            <solid android:color="@color/colorLightGray" /> <!-- Color de fondo cuando está seleccionado -->
+        </shape>
+    </item>
+    <item android:state_checked="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp" /> <!-- Radio de las esquinas -->
+            <solid android:color="@android:color/darker_gray" /> <!-- Color de fondo cuando no está seleccionado -->
+        </shape>
+    </item>
+</selector>
