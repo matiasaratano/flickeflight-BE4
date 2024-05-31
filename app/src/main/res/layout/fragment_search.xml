@@ -49,12 +49,11 @@
     <LinearLayout
         android:id="@+id/main_container"
         android:layout_width="377dp"
-        android:layout_height="350dp"
+        android:layout_height="384dp"
         android:layout_margin="20dp"
         android:background="@drawable/rounded_background"
         android:orientation="vertical"
         android:padding="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/offers_recyclerview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.66"
@@ -70,77 +69,110 @@
             <RadioButton
                 android:id="@+id/one_way"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:text="One Way" />
 
             <RadioButton
                 android:id="@+id/round_trip"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:text="Round Trip" />
         </RadioGroup>
 
         <!-- Input From -->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/from"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:hint="@string/select_departure"
+            app:startIconDrawable="@drawable/flight_takeoff"
+            tools:ignore="MissingConstraints">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_from"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:maxLines="1"
 
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Input To -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="To">
+            android:hint="@string/select_arrival"
+            app:startIconDrawable="@drawable/flight_land"
+            tools:ignore="MissingConstraints">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_to"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-                android:singleLine="true" />
 
+                android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Input Departure Date -->
-        <EditText
-            android:id="@+id/input_departure_date"
+
+        <!-- Input Departure Date with Icon -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedDateField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusable="false"
-            android:hint="Departure Date" />
+            android:hint="@string/select_date"
+            app:startIconDrawable="@drawable/date">
 
-        <!-- Inputs Passengers y Class -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_departure_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:focusable="false"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="2">
 
-            <EditText
-                android:id="@+id/input_passengers"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Passengers" />
 
-            <EditText
-                android:id="@+id/input_class"
+            <!-- Passengers Input with Icon -->
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Class" />
+                android:hint="@string/passengers"
+                app:startIconDrawable="@drawable/group"> <!-- Replace with your drawable -->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_passengers"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:contentDescription="@string/passengers"
+                    android:inputType="number" /> <!-- Add content description -->
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Class Input with Icon -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/class_input"
+                app:startIconDrawable="@drawable/hand"> <!-- Replace with your drawable -->
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_class"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:contentDescription="@string/class_input"
+                    android:inputType="text" /> <!-- Add content description -->
+            </com.google.android.material.textfield.TextInputLayout>
+
         </LinearLayout>
+
 
         <!-- Botón Search -->
         <Button
@@ -148,8 +180,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/orange"
-            android:shape="rectangle"
-            android:text="Search"
+            android:text="@string/button_search"
             android:textColor="@android:color/white" />
     </LinearLayout>
 
