@@ -3,7 +3,6 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-<<<<<<< HEAD
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#4fa853</color>
@@ -11,6 +10,4 @@
     <color name="orange">#F99A0E</color>
     <color name="your_outline_color">#FF0000</color>
     <color name="your_icon_tint_color">#0000FF</color>
-=======
->>>>>>> featureSearchResults
 </resources>
