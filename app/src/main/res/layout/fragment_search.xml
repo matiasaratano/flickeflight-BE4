@@ -71,6 +71,7 @@
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
                 android:text="One Way" />
 
             <RadioButton
@@ -78,6 +79,7 @@
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
                 android:text="Round Trip" />
         </RadioGroup>
 
@@ -91,11 +93,13 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_from"
+                style="@style/RobotoFont"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-
-                android:singleLine="true" />
+                android:letterSpacing="1.0"
+                android:singleLine="true"
+                android:textColor="#7E8B97" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Input To -->
@@ -111,12 +115,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
-
+                android:letterSpacing="1.0"
+                style="@style/RobotoFont"
+                android:textColor="#7E8B97"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <!-- Input Departure Date with Icon -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/outlinedDateField"
             android:layout_width="match_parent"
@@ -129,6 +133,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:focusable="false"
+                android:letterSpacing="1.0"
+                style="@style/RobotoFont"
+                android:textColor="#7E8B97"
                 android:inputType="date" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -151,6 +158,8 @@
                     android:id="@+id/input_passengers"
                     android:layout_width="match_parent"
                     android:layout_height="58dp"
+                    style="@style/RobotoFont"
+                    android:textColor="#191919"
                     android:contentDescription="@string/passengers"
                     android:inputType="number" /> <!-- Add content description -->
             </com.google.android.material.textfield.TextInputLayout>
@@ -167,6 +176,8 @@
                     android:id="@+id/input_class"
                     android:layout_width="match_parent"
                     android:layout_height="58dp"
+                    style="@style/RobotoFont"
+                    android:textColor="#191919"
                     android:contentDescription="@string/class_input"
                     android:inputType="text" /> <!-- Add content description -->
             </com.google.android.material.textfield.TextInputLayout>
@@ -179,9 +190,11 @@
             android:id="@+id/button_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/orange"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/inter_semibold"
             android:text="@string/button_search"
-            android:textColor="@android:color/white" />
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <!-- RecyclerView para las ofertas -->
