@@ -11,7 +11,7 @@
         android:id="@+id/toolbar"
 
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="@dimen/toolbar_height"
         android:background="@color/white"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -67,7 +67,7 @@
                 android:id="@+id/textGenerales"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Generales"
+                android:text="@string/generales"
                 android:textColor="@color/blue"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -89,14 +89,14 @@
             <!-- Switch para cambiar el modo oscuro -->
             <Switch
                 android:id="@+id/switchModoOscuro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="77dp"
+                android:layout_height="48dp"
                 android:layout_marginStart="70dp"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBaseline_toBaselineOf="@id/buttonModoOscuro"
-                app:layout_constraintTop_toBottomOf="@id/textGenerales"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/buttonModoOscuro"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/textGenerales"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

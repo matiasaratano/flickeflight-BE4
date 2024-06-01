@@ -7,6 +7,7 @@
     <string name="more_options">Más opciones</string>
     <string name="from">From</string>
     <string name="to">To</string>
+    <string name="generales">Generales</string>
     <string name="icon_description">Icono de avión despegando</string>
     <string name="select_departure">Select Departure</string>
     <string name="select_arrival">Select Arrival</string>
@@ -18,5 +19,12 @@
     <string name="one_way">One Way</string>
     <string name="modo_oscuro">Modo oscuro</string>
     <string name="modo_claro">Modo claro</string>
-
+    <string name="discount_master_simp">20% discount for mastercard users</string>
+    <string name="limited_time">Limited time offer!</string>
+    <string name="discount_visa_simp"> 25% discount with your Visa credit cards</string>
+    <string name="discount_visa">Use your VISA credit or debit card with any transaction and get 25% discount instantly</string>
+    <string name="discount_visa25">25% Discount with your VISA credit or Debit cards</string>
+    <string name="discount_master">Get 20% discount with your Master credit cards</string>
+    <string name="discount_master20">Use your mastercard with any transaction and get 20% discount instantly! </string>
+    <string name="limited_offer">LIMITED OFFER!</string>
 </resources>
