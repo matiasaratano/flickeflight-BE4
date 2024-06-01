@@ -5,9 +5,15 @@ buildscript {
     repositories {
         google()
         jcenter()
+<<<<<<< HEAD
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.4.1'
+=======
+        
+    }
+
+>>>>>>> featureSearchResults
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"
 
         def nav_version = "2.5.2"
@@ -19,6 +25,10 @@ allprojects {
     repositories {
         google()
         jcenter()
+<<<<<<< HEAD
+=======
+        
+>>>>>>> featureSearchResults
     }
 }
 

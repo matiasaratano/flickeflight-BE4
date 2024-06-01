@@ -1,5 +1,6 @@
 package com.manadigital.recyclerview1.activities
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -22,11 +23,20 @@ class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
     private lateinit var bottomNavView: BottomNavigationView
+=======
+
+
+
+
+
+class MainActivity : AppCompatActivity() {
+>>>>>>> featureSearchResults
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+<<<<<<< HEAD
         // Configurar Toolbar
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -54,3 +64,6 @@ class MainActivity : AppCompatActivity() {
         return NavigationUI.navigateUp(navController, drawerLayout) || super.onSupportNavigateUp()
     }
 }
+=======
+
+>>>>>>> featureSearchResults

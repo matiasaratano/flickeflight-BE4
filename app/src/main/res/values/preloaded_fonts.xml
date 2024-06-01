@@ -3,6 +3,12 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/inter</item>
         <item>@font/inter_bold</item>
+<<<<<<< HEAD
         <item>@font/roboto_medium</item>
     </array>
 </resources>
+=======
+        <item>@font/inter_semibold</item>
+    </array>
+</resources>
+>>>>>>> featureSearchResults
