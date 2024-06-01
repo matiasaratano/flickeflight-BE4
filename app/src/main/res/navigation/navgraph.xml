@@ -14,4 +14,9 @@
         android:name="com.manadigital.recyclerview1.fragments.PruebaFragment"
         android:label="PruebaFragment"
         tools:layout="@layout/layoutprueba"/>
+    <fragment
+        android:id="@+id/bottom_bar_profile"
+        android:name="com.manadigital.recyclerview1.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

@@ -185,11 +185,11 @@
         android:id="@+id/profile_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="-50dp"
         android:layout_marginStart="20dp"
         android:src="@drawable/picture_profile"
+        app:layout_constraintBottom_toTopOf="@id/roundedLayout"
         app:layout_constraintTop_toTopOf="@id/roundedLayout"
-        app:layout_constraintStart_toStartOf="@id/roundedLayout" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <FrameLayout
         android:id="@+id/fab_left"
