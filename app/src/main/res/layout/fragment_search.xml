@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="80dp"
         android:background="@color/white"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -152,7 +152,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="@string/passengers"
-                app:startIconDrawable="@drawable/group"> <!-- Replace with your drawable -->
+                app:startIconDrawable="@drawable/pasajerosicono_resized">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/input_passengers"
