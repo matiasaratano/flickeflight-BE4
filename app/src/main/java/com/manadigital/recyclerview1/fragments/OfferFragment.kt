@@ -6,14 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import com.manadigital.recyclerview1.R
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.manadigital.recyclerview1.adapters.OfferListAdapter
 import com.manadigital.recyclerview1.entities.Offers
-import com.manadigital.recyclerview1.holders.OfferHolder
 import com.manadigital.recyclerview1.listener.OnItemClickedListener
 
 

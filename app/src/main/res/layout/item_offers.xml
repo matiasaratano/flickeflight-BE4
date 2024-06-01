@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:backgroundTintMode="add"
-    app:cardCornerRadius="20dp"
+    app:cardCornerRadius="8dp"
     app:cardElevation="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +22,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/rounded_corners"
             android:backgroundTint="#32d4ad"
-            android:text="LIMITED OFFER!"
+            android:text="@string/limited_offer"
             android:textColor="#FFFFFF"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:text="25% Discount with your VISA credit or Debit cards"
+            android:text="@string/discount_visa25"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,46 +46,53 @@
 
         <ImageView
             android:id="@+id/credit_card"
-            android:layout_width="156dp"
-            android:layout_height="80dp"
+            android:layout_width="104dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/discount"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/visa" />
 
         <TextView
             android:id="@+id/description"
             android:layout_width="190dp"
             android:layout_height="73dp"
+            android:layout_marginStart="36dp"
             android:layout_marginTop="10dp"
-            android:text="Use your VISA credit or debit card with any transaction and get 25% discount instantly"
+            android:text="@string/discount_visa"
             android:textColor="#686D76"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/credit_card"
-            app:layout_constraintTop_toBottomOf="@+id/discount" />
+            app:layout_constraintTop_toBottomOf="@+id/discount"
+            app:layout_constraintVertical_bias="0.357" />
+
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.354"
             app:layout_constraintStart_toEndOf="@id/description"
             app:layout_constraintTop_toBottomOf="@+id/discount"
+            app:layout_constraintVertical_bias="0.478"
             app:srcCompat="@drawable/baseline_arrow_forward_ios_24" />
+
         <ImageView
             android:id="@+id/selector"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="32dp"
+            android:layout_height="31dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="15dp"
             android:clickable="true"
             android:focusable="true"
-            app:srcCompat="@drawable/heart_selector"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/heart_selector" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
