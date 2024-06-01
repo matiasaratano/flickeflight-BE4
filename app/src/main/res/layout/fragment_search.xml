@@ -190,9 +190,10 @@
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_button"
             android:fontFamily="@font/inter_bold"
+            android:textSize="14sp"
             android:text="@string/button_search"
             android:textColor="#FFFFFF"
-            android:textSize="14sp" />
+             />
     </LinearLayout>
 
     <!-- RecyclerView para las offers -->
