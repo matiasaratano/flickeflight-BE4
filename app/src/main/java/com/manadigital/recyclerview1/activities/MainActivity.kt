@@ -2,19 +2,13 @@ package com.manadigital.recyclerview1.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
-import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
 import com.manadigital.recyclerview1.R
 
 class MainActivity : AppCompatActivity() {
@@ -30,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         // Configurar Toolbar
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-
 
         drawerLayout = findViewById(R.id.drawer_layout)
         navigationView = findViewById(R.id.nav_view)
@@ -51,6 +44,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = navHostFragment.navController
-        return NavigationUI.navigateUp(navController, drawerLayout) || super.onSupportNavigateUp()
+        return NavigationUI.navigateUp(
+            navController,
+            drawerLayout
+        ) || super.onSupportNavigateUp()
     }
 }
