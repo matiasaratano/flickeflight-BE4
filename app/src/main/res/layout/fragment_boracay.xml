@@ -53,7 +53,7 @@
                 android:layout_centerVertical="true"
                 android:fontFamily="@font/inter_bold"
                 android:gravity="center_vertical"
-                android:text="Boracay"
+                android:text="@string/boracay"
                 android:textColor="#191919"
                 android:textSize="24sp" />
 
@@ -67,7 +67,7 @@
                 android:layout_marginBottom="-10dp"
                 android:fontFamily="@font/inter_bold"
                 android:gravity="bottom"
-                android:text="$349"
+                android:text="@string/price_349"
                 android:textColor="#191919"
                 android:textSize="24sp" />
         </RelativeLayout>
@@ -76,7 +76,7 @@
             android:id="@+id/location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Philippines"
+            android:text="@string/philippines"
             android:fontFamily="@font/inter"
             android:textSize="16sp"
             android:textColor="#7E8B97"
@@ -92,7 +92,7 @@
             android:fontFamily="@font/inter_semibold"
             android:textSize="16sp"
             android:textColor="#191919"
-            android:text="Overview"
+            android:text="@string/overview"
              />
 
         <TextView
@@ -104,7 +104,7 @@
             android:layout_marginEnd="60dp"
             android:fontFamily="@font/inter"
             android:lineSpacingExtra="7dp"
-            android:text="Spend 5 days and 4 nights in one of the best islands in the world! Bask in the sun while walking in the white sand beach and enjoy the night partying at the popular seaside bars."
+            android:text="@string/description"
 
             android:textColor="#191919"
             android:textSize="14sp" />
@@ -113,7 +113,7 @@
             android:id="@+id/photos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Photos"
+            android:text="@string/photos"
             android:textColor="#191919"
             android:fontFamily="@font/inter_semibold"
             android:textSize="16sp"
@@ -135,7 +135,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_bold"
             android:textSize="14sp"
-            android:text="Book Now"
+            android:text="@string/book_now"
             android:textColor="@android:color/white"
             android:background="@drawable/rounded_button"
             android:layout_marginStart="20dp"
