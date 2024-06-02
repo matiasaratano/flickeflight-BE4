@@ -65,7 +65,8 @@
             android:id="@+id/radioGroupContainer"
             android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:padding="2"
+            android:layout_marginBottom="10dp"
+            android:padding="2dp"
             android:background="@drawable/roundtrip"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -120,7 +121,7 @@
                 android:id="@+id/input_from"
                 style="@style/RobotoFont"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="56dp"
                 android:text="Select Departure"
                 android:maxLines="1"
                 android:singleLine="true"
@@ -130,7 +131,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:hint="To"
             android:textColorHint="#191919"
             app:hintTextAppearance="@font/roboto"
@@ -140,7 +141,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_to"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="56dp"
                 android:maxLines="1"
                 android:text="Select Departure"
                 style="@style/RobotoFont"
@@ -151,7 +152,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/outlinedDateField"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:hint="Departure Date"
             android:textColorHint="#191919"
             app:hintTextAppearance="@font/roboto"
@@ -160,7 +161,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_departure_date"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="56dp"
                 android:focusable="false"
                 android:text="Date"
                 style="@style/RobotoFont"
@@ -178,7 +179,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="56dp"
                 android:layout_weight="1"
                 android:hint="@string/passengers"
                 app:startIconDrawable="@drawable/pasajerosicono_resized">
@@ -194,7 +195,7 @@
             <!-- Class Input with Icon -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="56dp"
                 android:layout_weight="1"
                 app:startIconDrawable="@drawable/hand"
                 android:hint="@string/class_input"
@@ -220,10 +221,23 @@
             android:fontFamily="@font/inter_bold"
             android:text="@string/button_search"
             android:textAllCaps="false"
+            android:layout_marginTop="15dp"
             android:textColor="#FFFFFF"
             android:textSize="14sp"/>
     </LinearLayout>
-
+    <TextView
+        android:id="@+id/offer_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/offers_label"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/main_container"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="center" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/offers_horizontalRV"
@@ -231,7 +245,9 @@
         android:layout_height="wrap_content"
         android:scrollbars="horizontal"
         android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp"
         app:layout_constraintTop_toBottomOf="@id/main_container"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
