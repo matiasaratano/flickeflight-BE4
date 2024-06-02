@@ -23,7 +23,7 @@ class OfferHolder(v: View, private val listener: OnItemClickedListener) : Recycl
         }
     }
 
-    fun setTitulo(titulo: String?) {
+    fun setTitulo(titulo: CharSequence?) {
         val txt: TextView = view.findViewById(R.id.discount)
         txt.text = titulo
     }
