@@ -24,7 +24,9 @@ class FlightAdapter(private var flightList: List<Flight>) :
     override fun onBindViewHolder(holder: FlightViewHolder, position: Int) {
         val flight = flightList[position]
         holder.view.findViewById<TextView>(R.id.departure_airport).text = flight.departureAirport.name
+        holder.view.findViewById<TextView>(R.id.departure_airport_id2).text = flight.departureAirport.name
         holder.view.findViewById<TextView>(R.id.arrival_airport).text = flight.arrivalAirport.name
+        holder.view.findViewById<TextView>(R.id.arrival_airport_id2).text = flight.arrivalAirport.name
         holder.view.findViewById<TextView>(R.id.airline).text = flight.airline
         holder.view.findViewById<TextView>(R.id.duration).text = flight.duration.toString()
         holder.view.findViewById<TextView>(R.id.travel_class).text = flight.travelClass
