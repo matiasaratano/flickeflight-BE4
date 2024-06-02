@@ -6,7 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
-    <!-- Header Layout -->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="android:layout_width=&quot;wrap_content&quot;&#xA;android:layout_height=&quot;wrap_content&quot;" />
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="0dp"
@@ -16,48 +23,53 @@
         android:paddingTop="1dp"
         android:paddingEnd="1dp"
         android:paddingBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@id/flight_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="NotSibling">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/flight_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/date_july"
+            android:text="29 July, 2022"
             android:textColor="#7E8B97"
             android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/car_icon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="51dp"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/flight_arrow"
+            android:layout_width="12dp"
+            android:layout_height="22dp"
+            android:src="@drawable/flecha"
+            app:layout_constraintBottom_toBottomOf="@+id/departure_airport_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/id_departure_airport"
-            android:layout_width="30dp"
-            android:layout_height="19dp"
+            android:id="@+id/departure_airport_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/inter_semibold"
             android:gravity="center_vertical"
-            android:text="@string/airport_code_eze"
+            android:text="EZE"
             android:textColor="#191919"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@id/flight_date"
             tools:layout_constraintStart_toStartOf="@id/flight_date"
-            tools:layout_editor_absoluteX="151dp" />
+             />
 
         <TextView
-            android:id="@+id/id_arrival_airport"
-            android:layout_width="33dp"
-            android:layout_height="19dp"
+            android:id="@+id/arrival_airport_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/inter_semibold"
-            android:text="@string/airport_code_lax"
+            android:text="LAX"
             android:textColor="#191919"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@id/flight_date"
-            tools:layout_constraintEnd_toEndOf="@id/flight_date"
-            tools:layout_editor_absoluteX="209dp" />
+            app:layout_constraintEnd_toEndOf="@id/flight_date" />
 
         <ImageView
             android:id="@+id/car_icon"
@@ -75,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="@string/results_found_35"
+        android:text="35 results found"
         android:textColor="#7E8B97"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@id/cardView"
@@ -126,7 +138,7 @@
                 android:layout_marginStart="65dp"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/inter"
-                android:text="@string/airline_united"
+                android:text="United Airlines"
                 android:textColor="#7E8B97"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="@+id/departure_airport"
@@ -151,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="1dp"
-                android:text="@string/hour_40min"
+                android:text="01 hr 40min"
                 android:textColor="#7E8B97"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toTopOf="@+id/departure_airport_id"
@@ -171,11 +183,11 @@
 
             <TextView
                 android:id="@+id/arrival_airport"
-                android:layout_width="81dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="40dp"
-                android:text="@string/LA"
+                android:text="Los Angeles"
                 android:textColor="#191919"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/sub_card_bottom"
@@ -183,38 +195,39 @@
 
             <TextView
                 android:id="@+id/departure_airport"
-                android:layout_width="62dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginBottom="40dp"
-                android:text="@string/EZE"
+                android:text="Ezeiza Ar"
                 android:textColor="#191919"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/sub_card_bottom"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/departure_airport_id"
-                android:layout_width="45dp"
-                android:layout_height="24dp"
+                android:id="@+id/departure_airport_id2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="3dp"
                 android:fontFamily="@font/inter_bold"
                 android:gravity="left"
-                android:text="@string/airport_code_lax"
+                android:text="LAX"
                 android:textColor="#1262AE"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@id/arrival_airport"
                 app:layout_constraintEnd_toEndOf="parent" />
+            <!-- cambio de ids porqeu estaban repetidos departure_airport_id2 y arrival_airport_id2 VER  COMO SOLUCIONARLO!-->
 
             <TextView
-                android:id="@+id/arrival_airport_id"
-                android:layout_width="38dp"
-                android:layout_height="24dp"
+                android:id="@+id/arrival_airport_id2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginBottom="3dp"
                 android:fontFamily="@font/inter_bold"
-                android:text="@string/airport_code_eze"
+                android:text="EZE"
                 android:textColor="#1262AE"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/departure_airport"
@@ -233,7 +246,7 @@
 
             <LinearLayout
                 android:id="@+id/sub_card_bottom"
-                android:layout_width="319dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="10dp"
@@ -241,6 +254,7 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toTopOf="@id/book_button"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
 
                 <ImageView
@@ -256,9 +270,9 @@
                     android:layout_marginStart="-6dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="@string/class_business"
+                    android:text="Business Class"
                     android:textColor="#191919"
-                    android:textSize="14sp" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -266,7 +280,7 @@
                     android:layout_marginEnd="-55dp"
                     android:layout_weight="1"
                     android:gravity="center|end"
-                    android:text="@string/from"
+                    android:text="From"
                     android:textColor="#BBBBBB"
                     android:textSize="12sp" />
 
@@ -278,19 +292,17 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/inter_semibold"
                     android:gravity="center|end"
-                    android:text="@string/price_1000"
+                    android:text=" $1000"
                     android:textSize="18sp" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/book_button"
-                android:layout_width="319dp"
+                android:layout_width="0dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
                 android:background="@drawable/rounded_button"
                 android:fontFamily="@font/inter_semibold"
-                android:text="@string/view_details"
+                android:text="View Details"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"

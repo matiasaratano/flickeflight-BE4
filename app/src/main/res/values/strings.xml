@@ -22,7 +22,7 @@
     <string name="discount_master_simp">20% discount for mastercard users</string>
     <string name="limited_time">Limited time offer!</string>
     <string name="discount_visa_simp"> 25% discount with your Visa credit cards</string>
-    <string name="discount_visa">Use your VISA credit or debit card with any transaction and get 25% discount instantly</string>
+    <string name="discount_visa">Use your VISA credit or debit card with any transaction and get 25% discount instantly!</string>
     <string name="discount_visa25">25% Discount with your VISA credit or Debit cards</string>
     <string name="discount_master">Get 20% discount with your Master credit cards</string>
     <string name="discount_master20">Use your mastercard with any transaction and get 20% discount instantly! </string>
@@ -59,5 +59,8 @@
     <string name="logout">Logout</string>
     <string name="user_name">User Name</string>
     <string name="offer_description">Offer description</string>
+    <string name="offers_label">Offers</string>
+    <string name="logo">logo</string>
+    <string name="departure_date">Departure Date</string>
 
 </resources>

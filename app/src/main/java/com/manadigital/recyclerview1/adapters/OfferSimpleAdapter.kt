@@ -27,7 +27,6 @@ class OfferSimpleAdapter(private val offersList: List<OfferSimple>) :
     override fun onBindViewHolder(holder: OfferViewHolder, position: Int) {
         val offer = offersList[position]
         holder.discount.text = offer.discountText
-        holder.description.text = offer.descriptionText
         holder.creditCard.setImageResource(offer.imageResId)
     }
 
