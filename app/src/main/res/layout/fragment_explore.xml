@@ -349,7 +349,7 @@
 
 
                     <TextView
-                        android:id="@+id/discount"
+                        android:id="@+id/discount_master"
                         android:layout_width="136dp"
                         android:layout_height="38dp"
                         android:textSize="12sp"
@@ -364,7 +364,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <ImageView
-                    android:id="@+id/credit_card"
+                    android:id="@+id/credit_card_master"
                     android:layout_width="74dp"
                     android:layout_height="51dp"
                     android:layout_marginTop="15dp"
@@ -374,7 +374,7 @@
                     app:srcCompat="@drawable/mastercard" />
 
                 <TextView
-                    android:id="@+id/description"
+                    android:id="@+id/description_offer"
                     android:layout_width="100dp"
                     android:layout_height="45dp"
                     android:layout_marginStart="110dp"
@@ -388,7 +388,7 @@
             <!-- Example Offer Card -->
             <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_package_item_offers"
+                android:id="@+id/card_package_item_offers_2"
                 android:layout_width="264dp"
                 android:layout_height="86dp"
                 android:layout_margin="8dp"
