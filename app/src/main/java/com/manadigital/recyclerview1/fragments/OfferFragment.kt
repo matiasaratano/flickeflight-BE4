@@ -29,6 +29,9 @@ class OfferFragment : Fragment(), OnItemClickedListener{
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        offers =  ArrayList();
+        offers.add(Offers("Get 20% discount with your Master credit cards","Use your mastercard with any transaction and get 20% discount instantly!" ,R.drawable.mastercard))
+        offers.add(Offers("Get 25% discount with your VISA credit or debit cards","Use your VISA credit or debit card with any transaction and get 25% discount instantly!" ,R.drawable.visa))
         vista = inflater.inflate(R.layout.fragment_offer, container, false)
         recOffers = vista.findViewById(R.id.rec_offers)
 
@@ -38,8 +41,7 @@ class OfferFragment : Fragment(), OnItemClickedListener{
         super.onStart()
         Log.d("ListFragment", "onResume")
         //Creo la Lista Dinamica Ofertas
-        offers.add(Offers("Get 20% discount with your Master credit cards","Use your mastercard with any transaction and get 20% discount instantly!" ,R.drawable.mastercard))
-        offers.add(Offers("Get 25% discount with your VISA credit or debit cards","Use your VISA credit or debit card with any transaction and get 25% discount instantly!" ,R.drawable.visa))
+
 
 
         linearLayoutManager = LinearLayoutManager(context)
