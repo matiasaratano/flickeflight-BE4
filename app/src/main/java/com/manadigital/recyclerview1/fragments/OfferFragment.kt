@@ -21,6 +21,7 @@ class OfferFragment : Fragment(), OnItemClickedListener{
     lateinit var recOffers : RecyclerView
 
     var offers : MutableList<Offers> = ArrayList()
+
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var offerListAdapter: OfferListAdapter
 
