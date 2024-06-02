@@ -7,6 +7,12 @@
     tools:context=".activities.MainActivity">
 
     <!-- Header Layout -->
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="0dp"
@@ -28,22 +34,23 @@
             android:text="29 July, 2022"
             android:textColor="#7E8B97"
             android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/car_icon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="51dp" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/flight_arrow"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
+            android:layout_width="12dp"
+            android:layout_height="22dp"
             android:src="@drawable/flecha"
-            app:layout_constraintBottom_toBottomOf="@id/arrival_airport_id"
-            tools:layout_editor_absoluteX="195dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/departure_airport_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/departure_airport_id"
-            android:layout_width="30dp"
-            android:layout_height="19dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/inter_semibold"
             android:gravity="center_vertical"
             android:text="EZE"
@@ -51,19 +58,18 @@
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@id/flight_date"
             tools:layout_constraintStart_toStartOf="@id/flight_date"
-            tools:layout_editor_absoluteX="151dp" />
+             />
 
         <TextView
             android:id="@+id/arrival_airport_id"
-            android:layout_width="33dp"
-            android:layout_height="19dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/inter_semibold"
             android:text="LAX"
             android:textColor="#191919"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@id/flight_date"
-            tools:layout_constraintEnd_toEndOf="@id/flight_date"
-            tools:layout_editor_absoluteX="209dp" />
+            app:layout_constraintEnd_toEndOf="@id/flight_date" />
 
         <ImageView
             android:id="@+id/car_icon"
@@ -177,8 +183,8 @@
 
             <TextView
                 android:id="@+id/arrival_airport"
-                android:layout_width="81dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="40dp"
                 android:text="Los Angeles"
@@ -189,8 +195,8 @@
 
             <TextView
                 android:id="@+id/departure_airport"
-                android:layout_width="62dp"
-                android:layout_height="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginBottom="40dp"
                 android:text="Ezeiza Ar"
@@ -201,8 +207,8 @@
 
             <TextView
                 android:id="@+id/departure_airport_id"
-                android:layout_width="45dp"
-                android:layout_height="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="3dp"
                 android:fontFamily="@font/inter_bold"
@@ -215,8 +221,8 @@
 
             <TextView
                 android:id="@+id/arrival_airport_id"
-                android:layout_width="38dp"
-                android:layout_height="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_marginBottom="3dp"
                 android:fontFamily="@font/inter_bold"
@@ -239,7 +245,7 @@
 
             <LinearLayout
                 android:id="@+id/sub_card_bottom"
-                android:layout_width="319dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:layout_marginBottom="10dp"
@@ -247,6 +253,7 @@
                 android:gravity="center"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toTopOf="@id/book_button"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
 
                 <ImageView
@@ -290,10 +297,8 @@
 
             <Button
                 android:id="@+id/book_button"
-                android:layout_width="319dp"
+                android:layout_width="0dp"
                 android:layout_height="45dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
                 android:background="@drawable/rounded_button"
                 android:fontFamily="@font/inter_semibold"
                 android:text="View Details"
