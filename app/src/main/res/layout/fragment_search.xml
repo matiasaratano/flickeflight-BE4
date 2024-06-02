@@ -82,7 +82,7 @@
                 android:button="@null"
                 android:fontFamily="@font/roboto_medium"
                 android:gravity="center"
-                android:text="One way"
+                android:text="@string/one_way"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="14sp" />
@@ -101,7 +101,7 @@
                 android:button="@null"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:text="Round trip"
+                android:text="@string/round"
                 android:textColor="#9EAAB6"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -110,7 +110,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="From"
+            android:hint="@string/from"
             android:textColorHint="#191919"
             app:hintTextAppearance="@font/roboto"
             app:startIconDrawable="@drawable/flight_takeoff"
@@ -122,7 +122,7 @@
                 style="@style/RobotoFont"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:text="Select Departure"
+                android:text="@string/select_departure"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:textColor="#7E8B97" />
@@ -132,7 +132,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:hint="To"
+            android:hint="@string/to"
             android:textColorHint="#191919"
             app:hintTextAppearance="@font/roboto"
             app:startIconDrawable="@drawable/flight_land"
@@ -143,7 +143,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:maxLines="1"
-                android:text="Select Departure"
+                android:text="@string/select_arrival"
                 style="@style/RobotoFont"
                 android:textColor="#7E8B97"
                 android:singleLine="true" />
@@ -153,7 +153,7 @@
             android:id="@+id/outlinedDateField"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:hint="Departure Date"
+            android:hint="@string/departure_date"
             android:textColorHint="#191919"
             app:hintTextAppearance="@font/roboto"
             app:startIconDrawable="@drawable/date">
@@ -163,7 +163,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:focusable="false"
-                android:text="Date"
+                android:text="@string/select_date"
                 style="@style/RobotoFont"
                 android:textColor="#7E8B97"
                 android:inputType="date" />
@@ -236,7 +236,7 @@
         app:layout_constraintTop_toBottomOf="@id/main_container"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
         android:layout_gravity="center" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -245,7 +245,7 @@
         android:layout_height="wrap_content"
         android:scrollbars="horizontal"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
         app:layout_constraintTop_toBottomOf="@id/main_container"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />

@@ -61,5 +61,6 @@
     <string name="offer_description">Offer description</string>
     <string name="offers_label">Offers</string>
     <string name="logo">logo</string>
+    <string name="departure_date">Departure Date</string>
 
 </resources>
