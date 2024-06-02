@@ -12,7 +12,7 @@
         android:layout_height="0dp"
         android:scaleType="centerCrop"
         android:src="@drawable/fondo_boracay"
-        app:layout_constraintHeight_percent="0.60"
+        app:layout_constraintHeight_percent="0.53"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -23,7 +23,7 @@
         android:layout_height="0dp"
         android:background="@drawable/rounded_top_corners"
         android:orientation="vertical"
-        app:layout_constraintHeight_percent="0.88"
+        app:layout_constraintHeight_percent="0.89"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -35,31 +35,51 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp">
 
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="55dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/name"
+                android:src="@drawable/diasboracay" />
+
+
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Boracay"
-                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center_vertical"
+                android:text="@string/boracay"
+                android:textColor="#191919"
                 android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="$349"
-                android:textStyle="bold"
-                android:textSize="24sp"
+                android:layout_alignBottom="@id/imageView5"
+                android:layout_alignParentEnd="true"
                 android:layout_marginRight="20dp"
-                android:layout_alignParentEnd="true" />
+                android:layout_marginBottom="-10dp"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="bottom"
+                android:text="@string/price_349"
+                android:textColor="#191919"
+                android:textSize="24sp" />
         </RelativeLayout>
 
         <TextView
             android:id="@+id/location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Philippines"
-            android:textColor="#808080"
+            android:text="@string/philippines"
+            android:fontFamily="@font/inter"
+            android:textSize="16sp"
+            android:textColor="#7E8B97"
             android:layout_marginStart="20dp"
             android:layout_marginTop="1dp" />
 
@@ -67,27 +87,36 @@
             android:id="@+id/overview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Overview"
-            android:textStyle="bold"
-            android:textSize="15sp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/inter_semibold"
+            android:textSize="16sp"
+            android:textColor="#191919"
+            android:text="@string/overview"
+             />
 
         <TextView
             android:id="@+id/description"
-            android:layout_width="wrap_content"
+            android:layout_width="343dp"
             android:layout_height="wrap_content"
-            android:text="Spend 5 days and 4 nights in one of the best islands in the world! Bask in the sun while walking in the white sand beach and enjoy the night partying at the popular seaside bars."
             android:layout_marginStart="20dp"
-            android:layout_marginTop="6dp" />
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="60dp"
+            android:fontFamily="@font/inter"
+            android:lineSpacingExtra="7dp"
+            android:text="@string/description"
+
+            android:textColor="#191919"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/photos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Photos"
-            android:textStyle="bold"
-            android:textSize="15sp"
+            android:text="@string/photos"
+            android:textColor="#191919"
+            android:fontFamily="@font/inter_semibold"
+            android:textSize="16sp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp" />
 
@@ -104,12 +133,16 @@
             android:id="@+id/book_now_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Book Now"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="14sp"
+            android:text="@string/book_now"
             android:textColor="@android:color/white"
-            android:background="@drawable/button_boracay_background"
+            android:background="@drawable/rounded_button"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp" />
+
+
 
     </LinearLayout>
 
@@ -118,13 +151,11 @@
         android:id="@+id/fab_left"
         android:layout_width="35dp"
         android:layout_height="35dp"
+        android:background="@drawable/circle_background"
         android:clickable="true"
         android:focusable="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/circle_background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toTopOf="@id/roundedLayout"
+        tools:layout_editor_absoluteX="25dp">
 
         <ImageView
             android:layout_width="24dp"
@@ -137,13 +168,11 @@
         android:id="@+id/fab_right"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginEnd="25dp"
+        android:background="@drawable/circle_background"
         android:clickable="true"
         android:focusable="true"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/circle_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toTopOf="@id/roundedLayout"
+        tools:layout_editor_absoluteX="351dp">
 
         <ImageView
             android:id="@+id/heartImageView"

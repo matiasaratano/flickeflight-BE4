@@ -11,7 +11,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;" />
+        android:text="android:layout_width=&quot;wrap_content&quot;&#xA;android:layout_height=&quot;wrap_content&quot;" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

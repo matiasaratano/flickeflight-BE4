@@ -18,7 +18,7 @@
         android:id="@+id/textViewUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Name"
+        android:text="@string/user_name"
         android:textColor="@android:color/white"
         android:textSize="16sp"
         android:layout_gravity="center"
