@@ -1,6 +1,6 @@
 package com.manadigital.recyclerview1.entities
 
-data class Flight(
+data class FlightX(
     val airline: String,
     val airline_logo: String,
     val airplane: String,
