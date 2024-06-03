@@ -13,7 +13,9 @@
     <string name="select_arrival">Select Arrival</string>
     <string name="select_date">Select Date</string>
     <string name="class_input">Economy</string>
+    <string name="class_input_label">Class</string>
     <string name="passengers">1 Adult</string>
+    <string name="passengers_label">Passengers</string>
     <string name="button_search">Search</string>
     <string name="round">Round Trip</string>
     <string name="one_way">One Way</string>

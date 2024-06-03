@@ -68,38 +68,41 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/label_departure"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:text="@string/from"
+            android:textColor="@color/black"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="@string/from"
-            android:textColorHint="#191919"
-            app:hintTextAppearance="@font/roboto"
             app:shapeAppearance="@color/black"
             app:startIconDrawable="@drawable/flight_takeoff"
-            tools:ignore="MissingConstraints">
+            tools:ignore="MissingConstraints"
+            >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_from"
                 style="@style/RobotoFont"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-
+                android:layout_height="48dp"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:text="@string/select_departure"
                 android:textColor="#7E8B97" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
+        <TextView
+            android:id="@+id/label_arrival"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:text="@string/to"
+            android:textColor="@color/black"/>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="20dp"
-            android:hint="@string/to"
-            android:textColorHint="#191919"
-            app:hintTextAppearance="@font/roboto"
+            android:layout_height="52dp"
             app:startIconDrawable="@drawable/flight_land"
             tools:ignore="MissingConstraints">
 
@@ -107,39 +110,56 @@
                 android:id="@+id/input_to"
                 style="@style/RobotoFont"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="48dp"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:text="@string/select_arrival"
                 android:textColor="#7E8B97" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/label_date"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/departure_date"
+            android:textColor="@color/black"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/outlinedDateField"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="20dp"
-            android:hint="@string/departure_date"
-            android:textColorHint="#191919"
-            app:hintTextAppearance="@font/roboto"
+            android:layout_height="52dp"
             app:startIconDrawable="@drawable/date">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_departure_date"
                 style="@style/RobotoFont"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="48dp"
                 android:focusable="false"
                 android:inputType="date"
 
                 android:text="@string/select_date"
                 android:textColor="#7E8B97" />
         </com.google.android.material.textfield.TextInputLayout>
-
+        <TextView
+            android:id="@+id/label_passengers"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="-20dp"
+            android:text="@string/passengers_label"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/label_class"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="190dp"
+            android:text="@string/class_input_label"
+            android:textColor="@color/black"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="2dp"
             android:baselineAligned="false"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -147,7 +167,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
-                android:layout_height="56dp"
+                android:layout_height="52dp"
                 android:layout_weight="1"
                 android:hint="@string/passengers"
                 app:startIconDrawable="@drawable/pasajerosicono_resized">
@@ -156,14 +176,14 @@
                     android:id="@+id/input_passengers"
                     style="@style/RobotoFont"
                     android:layout_width="match_parent"
-                    android:layout_height="58dp"
+                    android:layout_height="48dp"
                     android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Class Input with Icon -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="0dp"
-                android:layout_height="56dp"
+                android:layout_height="52dp"
                 android:layout_weight="1"
                 android:hint="@string/class_input"
                 app:startIconDrawable="@drawable/hand">
@@ -172,7 +192,7 @@
                     android:id="@+id/input_class"
                     style="@style/RobotoFont"
                     android:layout_width="match_parent"
-                    android:layout_height="58dp"
+                    android:layout_height="48dp"
                     android:inputType="text"
                     android:textColor="#191919" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -184,7 +204,7 @@
             android:id="@+id/button_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/rounded_button"
             android:fontFamily="@font/inter_bold"
             android:text="@string/button_search"
