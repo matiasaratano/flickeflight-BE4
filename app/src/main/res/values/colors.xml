@@ -11,4 +11,12 @@
     <color name="your_outline_color">#FF0000</color>
     <color name="blue">#1B72C0</color>
     <color name="gris">#999999</color> 999999
+    <color name="generalesText">#1B72C0</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="offerBackground">#FFFFFF</color>
+    <color name="offerDescription">#686D76</color>
+    <color name="textColor">#191919</color>
+    <color name="textColorSearch">#7E8B97</color>
+    <color name="buttonTextColor">#FFFFFFFF</color>
+    <color name="textColorSecondary">#757575</color>
 </resources>

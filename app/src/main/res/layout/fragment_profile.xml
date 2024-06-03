@@ -38,7 +38,7 @@
             android:fontFamily="@font/inter_bold"
             android:text="@string/name_macy"
             android:textSize="24sp"
-            android:textColor="#191919"
+            android:textColor="@color/textColor"
             android:textStyle="bold" />
 
         <TextView
@@ -60,7 +60,7 @@
             android:fontFamily="@font/inter"
             android:lineSpacingExtra="7dp"
             android:text="@string/description_beach"
-            android:textColor="#191919"
+            android:textColor="@color/textColor"
             android:textSize="14sp" />
 
         <View
@@ -96,7 +96,7 @@
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/roboto_medium"
                 android:gravity="center_vertical"
-                android:textColor="#191919"
+                android:textColor="@color/textColor"
                 android:textSize="16sp"
                 android:text="@string/payment_details"/>
 
@@ -127,7 +127,7 @@
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/roboto_medium"
                 android:gravity="center_vertical"
-                android:textColor="#191919"
+                android:textColor="@color/textColor"
                 android:textSize="16sp"
                 android:text="@string/referral" />
 
@@ -164,7 +164,7 @@
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/roboto_medium"
                 android:gravity="center_vertical"
-                android:textColor="#191919"
+                android:textColor="@color/textColor"
                 android:textSize="16sp"
                 android:text="@string/settings"/>
 
@@ -194,7 +194,7 @@
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/roboto_medium"
                 android:gravity="center_vertical"
-                android:textColor="#191919"
+                android:textColor="@color/textColor"
                 android:textSize="16sp"
                 android:text="@string/logout" />
 

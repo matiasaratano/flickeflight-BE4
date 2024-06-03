@@ -7,7 +7,8 @@
     android:layout_margin="8dp"
     android:backgroundTintMode="add"
     app:cardCornerRadius="8dp"
-    app:cardElevation="8dp">
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@color/offerBackground">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -25,7 +26,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.862"
             app:layout_constraintStart_toStartOf="parent"
-            android:textColor="@color/black"/>
+            android:textColor="@color/textColor"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -46,7 +47,7 @@
         android:layout_marginStart="110dp"
         android:layout_marginTop="45dp"
         android:text="@string/limited_time"
-        android:textColor="@color/gris"
+        android:textColor="@color/offerDescription"
         android:textSize="12sp" />
 
 </androidx.cardview.widget.CardView>
