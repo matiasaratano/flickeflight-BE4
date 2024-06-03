@@ -1,6 +1,7 @@
 package com.manadigital.recyclerview1.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.manadigital.recyclerview1.R
 import com.manadigital.recyclerview1.adapters.FlightAdapter
 import com.manadigital.recyclerview1.entities.Flight
+import com.manadigital.recyclerview1.entities.FlightsModels
+import com.manadigital.recyclerview1.network.ActivityServiceApiBuilder
 import com.manadigital.recyclerview1.network.FlightService
 import retrofit2.Call
 import retrofit2.Callback
@@ -60,6 +63,28 @@ class FlightFragment : Fragment() {
 
             override fun onFailure(call: Call<List<Flight>>, t: Throwable) {
                 // Manejar error
+            }
+        })
+    }
+    fun loadFlights() {
+
+        val service = ActivityServiceApiBuilder.create()
+
+        service.searchFlights().enqueue(object : Callback<FlightsModels> {
+            override fun onResponse(call: Call<FlightsModels>, response: Response<FlightsModels>) {
+                if (response.isSuccessful) {
+                    val flightsResponse = response.body()
+                    Log.e("Retrofit", flightsResponse.toString())
+                } else {
+                    Log.e(
+                        "Example",
+                        "Response not successful: ${response.errorBody()?.string()}"
+                    )
+                }
+            }
+
+            override fun onFailure(call: Call<FlightsModels>, t: Throwable) {
+                Log.e("Example", "Error: ${t.message}", t)
             }
         })
     }
