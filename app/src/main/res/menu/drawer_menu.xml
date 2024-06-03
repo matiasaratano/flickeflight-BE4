@@ -2,22 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
         <item
-            android:id="@+id/bottom_bar_explore"
-            android:icon="@drawable/bottom_tab_explore"
-            android:title="Explore" />
+            android:id="@+id/bottom_bar_profile"
+            android:icon="@drawable/m_profile"
+            android:title="Profile" />
 
         <item
-            android:id="@+id/bottom_bar_search"
-            android:icon="@drawable/bottom_tab_search"
-            android:title="Search" />
+            android:id="@+id/drawer_notifications"
+            android:icon="@drawable/m_notification"
+            android:title="Notifications" />
         <item
-            android:id="@+id/bottom_bar_offers"
-            android:icon="@drawable/bottom_tab_offers"
-            android:title="Offers" />
+            android:id="@+id/drawer_help"
+            android:icon="@drawable/m_gethelp"
+            android:title="Get Help" />
         <item
-            android:id="@+id/bottom_bar_profile"
-            android:icon="@drawable/bottom_tab_profile"
-            android:title="Profile" />
+            android:id="@+id/drawer_calendar"
+            android:icon="@drawable/m_calendar"
+            android:title="Calendar" />
+        <item
+            android:id="@+id/drawer_settings"
+            android:icon="@drawable/m_settings"
+            android:title="Settings" />
+
 
 
 </menu>

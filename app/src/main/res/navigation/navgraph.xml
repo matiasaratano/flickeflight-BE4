@@ -18,11 +18,36 @@
         android:id="@+id/bottom_bar_profile"
         android:name="com.manadigital.recyclerview1.fragments.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_bottom_bar_profile_to_drawer_settings"
+            app:destination="@id/drawer_settings" />
+    </fragment>
 
     <fragment
         android:id="@+id/bottom_bar_search"
         android:name="com.manadigital.recyclerview1.fragments.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/fragment_search"/>
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_bottom_bar_search_to_flightFragment"
+            app:destination="@id/flightFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drawer_settings"
+        android:name="com.manadigital.recyclerview1.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/flightFragment"
+        android:name="com.manadigital.recyclerview1.fragments.FlightFragment"
+        android:label="FlightFragment" >
+        <action
+            android:id="@+id/action_flightFragment_to_boracayFragment"
+            app:destination="@id/boracayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/boracayFragment"
+        android:name="com.manadigital.recyclerview1.fragments.BoracayFragment"
+        android:label="fragment_boracay"
+        tools:layout="@layout/fragment_boracay" />
 </navigation>

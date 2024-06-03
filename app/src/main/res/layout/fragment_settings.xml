@@ -6,51 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/toolbar_height"
-        android:background="@color/white"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        tools:ignore="MissingConstraints">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/back_arrow"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/hambuerguer"
-                android:contentDescription="@string/back_arrow" />
-
-            <ImageView
-                android:id="@+id/logo"
-                android:layout_width="200dp"
-                android:layout_height="32dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/logo"
-                android:contentDescription="@string/logo" />
-
-            <ImageView
-                android:id="@+id/more_vert"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/picture_profile"
-                android:contentDescription="@string/more_options" />
-
-        </RelativeLayout>
-    </androidx.appcompat.widget.Toolbar>
-
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="343dp"
@@ -61,7 +16,7 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -74,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/generales"
                 android:textColor="@color/blue"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -84,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="70dp"
-                android:textSize="22sp"
+                android:textSize="16sp"
                 android:text="@string/modo_oscuro"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
