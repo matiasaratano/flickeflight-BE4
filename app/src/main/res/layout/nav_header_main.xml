@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:padding="16dp"
-    android:background="@color/white">
+    android:background="@color/windowBackground">
 
     <ImageView
         android:id="@+id/drawer_profile_image"
@@ -35,7 +35,7 @@
         android:layout_width="132dp"
         android:layout_height="30dp"
         android:text="Macy Johnson"
-        android:textColor="@color/black"
+        android:textColor="@color/textColor"
         android:textSize="20sp"
         android:fontFamily="@font/roboto_bold"
         android:layout_marginStart="20dp"

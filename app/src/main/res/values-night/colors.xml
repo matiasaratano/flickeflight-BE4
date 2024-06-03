@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#BB86FC</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC6</color>
+    <color name="windowBackground">#191919</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="textColorSearch">#FFFFFF</color>
+    <color name="textColorSecondary">#A1A1A1</color>
+    <color name="buttonTextColor">#191919</color>
+    <color name="offerBackground">#000000</color>
+    <color name="offerDescription">#7E8B97</color>
+    <color name="generalesText">#03DAC6</color>
+</resources>
