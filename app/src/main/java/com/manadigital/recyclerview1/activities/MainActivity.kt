@@ -1,10 +1,14 @@
 package com.manadigital.recyclerview1.activities
 
 import android.graphics.PorterDuff
+import android.graphics.drawable.LayerDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
@@ -38,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         setupDrawerLayout()
     }
 
+
     private fun setupDrawerLayout() {
         val navController = navHostFragment.navController
         navigationView.setupWithNavController(navController)
@@ -50,5 +55,31 @@ class MainActivity : AppCompatActivity() {
             navController,
             drawerLayout
         ) || super.onSupportNavigateUp()
+    }
+
+    fun changeToolbarBackground(drawableId: Int) {
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        toolbar.setBackgroundResource(drawableId)
+    }
+
+    fun addToolbarButton() {
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        val menuItem = toolbar.menu.add(0, R.id.fab_right, 0, "")
+        val icon = ContextCompat.getDrawable(this, R.drawable.outline_mode_edit_outline_24)
+        val wrappedIcon = DrawableCompat.wrap(icon!!)
+        DrawableCompat.setTint(wrappedIcon, ContextCompat.getColor(this, android.R.color.black))
+        val layers = arrayOf(ContextCompat.getDrawable(this, R.drawable.back_button), wrappedIcon)
+        val layerDrawable = LayerDrawable(layers)
+        menuItem.icon = layerDrawable
+        menuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM)
+        menuItem.setOnMenuItemClickListener {
+            // Aquí manejas el clic en tu botón personalizado
+            true
+        }
+    }
+
+    fun removeToolbarButton() {
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        toolbar.menu.removeItem(R.id.fab_right)
     }
 }
