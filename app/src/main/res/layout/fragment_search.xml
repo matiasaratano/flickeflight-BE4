@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground">
 
     <LinearLayout
         android:id="@+id/main_container"
@@ -73,7 +74,7 @@
             android:layout_width="40dp"
             android:layout_height="20dp"
             android:text="@string/from"
-            android:textColor="@color/black"/>
+            android:textColor="@color/textColor"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -91,7 +92,7 @@
                 android:maxLines="1"
                 android:singleLine="true"
                 android:text="@string/select_departure"
-                android:textColor="#7E8B97" />
+                android:textColor="@color/textColorSearch" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -99,7 +100,7 @@
             android:layout_width="40dp"
             android:layout_height="20dp"
             android:text="@string/to"
-            android:textColor="@color/black"/>
+            android:textColor="@color/textColor"/>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="52dp"
@@ -114,7 +115,7 @@
                 android:maxLines="1"
                 android:singleLine="true"
                 android:text="@string/select_arrival"
-                android:textColor="#7E8B97" />
+                android:textColor="@color/textColor" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
@@ -123,7 +124,7 @@
             android:layout_height="20dp"
             android:layout_marginTop="12dp"
             android:text="@string/departure_date"
-            android:textColor="@color/black"/>
+            android:textColor="@color/textColor"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/outlinedDateField"
             android:layout_width="match_parent"
@@ -139,7 +140,7 @@
                 android:inputType="date"
 
                 android:text="@string/select_date"
-                android:textColor="#7E8B97" />
+                android:textColor="@color/textColor" />
         </com.google.android.material.textfield.TextInputLayout>
         <TextView
             android:id="@+id/label_passengers"
@@ -148,14 +149,14 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="-20dp"
             android:text="@string/passengers_label"
-            android:textColor="@color/black"/>
+            android:textColor="@color/textColor"/>
         <TextView
             android:id="@+id/label_class"
             android:layout_width="100dp"
             android:layout_height="20dp"
             android:layout_marginLeft="190dp"
             android:text="@string/class_input_label"
-            android:textColor="@color/black"/>
+            android:textColor="@color/textColor"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
