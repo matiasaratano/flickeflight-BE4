@@ -1,6 +1,7 @@
 package com.manadigital.recyclerview1.fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,7 +53,10 @@ public class SearchFragment extends Fragment {
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.d("SearchFragment", "Button clicked!");
+                Log.d("SearchFragment", "Before navigating to FlightFragment");
                 Navigation.findNavController(v).navigate(R.id.action_bottom_bar_search_to_flightFragment);
+                Log.d("SearchFragment", "After navigating to FlightFragment");
             }
         });
 

@@ -1,14 +1,15 @@
 package com.manadigital.recyclerview1.entities
+import com.manadigital.recyclerview1.entities.FlightDetails
+
 
 data class Flight(
-    val departureAirport: Airport,
-    val arrivalAirport: Airport,
-    val duration: Int,
-    val airline: String,
+    val flights: List<FlightDetails>,
+
+    val totalDuration: Int,
+    val price: Int,
+    val type: String,
     val airlineLogo: String,
-    val travelClass: String,
-    val price: Double,
-    val id: String
+    val departureToken: String
 )
 
 data class Airport(
