@@ -3,14 +3,17 @@ package com.manadigital.recyclerview1.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.manadigital.recyclerview1.R
 import com.manadigital.recyclerview1.entities.Flight
+import com.manadigital.recyclerview1.listener.OnItemNavClickedListener
+import com.manadigital.recyclerview1.listener.SearchResultOnClick
 import com.squareup.picasso.Picasso
 
-class FlightAdapter(private var flightList: List<Flight>) :
+class FlightAdapter(private var flightList: List<Flight>,  private val onItemClickListener : SearchResultOnClick) :
     RecyclerView.Adapter<FlightAdapter.FlightViewHolder>() {
 
     private val airportNameMap = mapOf(
@@ -34,6 +37,7 @@ class FlightAdapter(private var flightList: List<Flight>) :
 
     override fun onBindViewHolder(holder: FlightViewHolder, position: Int) {
         val flight = flightList[position]
+<<<<<<< HEAD
         val departureAirportName = airportNameMap[flight.departure_airport.id] ?: flight.departure_airport.name
         val arrivalAirportName = airportNameMap[flight.arrival_airport.id] ?: flight.arrival_airport.name
 
@@ -47,6 +51,21 @@ class FlightAdapter(private var flightList: List<Flight>) :
         holder.view.findViewById<TextView>(R.id.price).text = flight.price.toString()
         holder.view.findViewById<TextView>(R.id.departure_airport_id).text = flight.departure_airport.id
         holder.view.findViewById<TextView>(R.id.arrival_airport_id).text = flight.arrival_airport.id
+=======
+        holder.view.findViewById<TextView>(R.id.departure_airport).text = flight.departureAirport.name
+        holder.view.findViewById<TextView>(R.id.departure_airport_id2).text = flight.departureAirport.name
+        holder.view.findViewById<TextView>(R.id.arrival_airport).text = flight.arrivalAirport.name
+        holder.view.findViewById<TextView>(R.id.arrival_airport_id2).text = flight.arrivalAirport.name
+        holder.view.findViewById<TextView>(R.id.airline).text = flight.airline
+        holder.view.findViewById<TextView>(R.id.duration).text = flight.duration.toString()
+        holder.view.findViewById<TextView>(R.id.travel_class).text = flight.travelClass
+        holder.view.findViewById<TextView>(R.id.price).text = flight.price.toString()
+        holder.view.findViewById<TextView>(R.id.departure_airport_id).text = flight.departureAirport.id
+        holder.view.findViewById<TextView>(R.id.arrival_airport_id).text = flight.arrivalAirport.id
+        holder.view.findViewById<Button>(R.id.book_button).setOnClickListener{
+            onItemClickListener.navOnClick()
+        }
+>>>>>>> 71d8f934f59d784abe2888a509981d42a1784923
 
         val imageView = holder.view.findViewById<ImageView>(R.id.airline_logo)
         Picasso.get().load(flight.airline_logo).into(imageView)
