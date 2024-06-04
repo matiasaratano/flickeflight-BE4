@@ -16,7 +16,11 @@
         tools:layout="@layout/fragment_explore">
         <action
             android:id="@+id/action_bottom_bar_explore_to_boracayFragment"
-            app:destination="@id/boracayFragment" />
+            app:destination="@id/boracayFragment">
+        <argument
+            android:name="flightCode"
+            app:argType="string" />
+    </action>
         <action
             android:id="@+id/action_bottom_bar_explore_to_bottom_bar_offers"
             app:destination="@id/bottom_bar_offers" />
@@ -55,6 +59,9 @@
         <action
             android:id="@+id/action_flightFragment_to_boracayFragment"
             app:destination="@id/boracayFragment">
+            <argument
+                android:name="flightCode"
+                app:argType="string" />
         </action>
     </fragment>
     <fragment
