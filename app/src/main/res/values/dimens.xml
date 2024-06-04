@@ -2,4 +2,5 @@
 <resources>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="toolbar_height">68dp</dimen>
+    <dimen name="spacing">16dp</dimen>
 </resources>

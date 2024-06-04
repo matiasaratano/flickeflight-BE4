@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         menuItem.icon = layerDrawable
         menuItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM)
         menuItem.setOnMenuItemClickListener {
-            // Aquí manejas el clic en tu botón personalizado
+
             true
         }
     }

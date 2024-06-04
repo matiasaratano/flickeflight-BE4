@@ -38,53 +38,34 @@ class FlightFragment : Fragment() {
             setHasFixedSize(true)
             layoutManager = viewManager
             adapter = viewAdapter
+
+
         }
 
-        fetchFlights()
+        loadFlights()
 
         return view
     }
 
-    private fun fetchFlights() {
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://d9811bf4-5e67-4a8c-bdcf-603cbbfc0275.mock.pstmn.io/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        val service = retrofit.create(FlightService::class.java)
-
-        val call = service.searchFlights("google_flights", "123", "EZE", "MIA", "2024-05-31", "2024-06-10")
-        call.enqueue(object : Callback<List<Flight>> {
-            override fun onResponse(call: Call<List<Flight>>, response: Response<List<Flight>>) {
-                if (response.isSuccessful) {
-                    viewAdapter.updateData(response.body()!!)
-                }
-            }
-
-            override fun onFailure(call: Call<List<Flight>>, t: Throwable) {
-                // Manejar error
-            }
-        })
-    }
-    fun loadFlights() {
-
+    private fun loadFlights() {
         val service = ActivityServiceApiBuilder.create()
 
         service.searchFlights().enqueue(object : Callback<FlightsModels> {
             override fun onResponse(call: Call<FlightsModels>, response: Response<FlightsModels>) {
                 if (response.isSuccessful) {
                     val flightsResponse = response.body()
-                    Log.e("Retrofit", flightsResponse.toString())
+                    // Actualiza el adaptador con los vuelos obtenidos de la respuesta
+                    viewAdapter.updateData(flightsResponse?.best_flights?.flatMap { it.flights } ?: emptyList())
                 } else {
                     Log.e(
-                        "Example",
+                        "FlightFragment",
                         "Response not successful: ${response.errorBody()?.string()}"
                     )
                 }
             }
 
             override fun onFailure(call: Call<FlightsModels>, t: Throwable) {
-                Log.e("Example", "Error: ${t.message}", t)
+                Log.e("FlightFragment", "Error: ${t.message}", t)
             }
         })
     }

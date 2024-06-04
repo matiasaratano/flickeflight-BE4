@@ -8,5 +8,6 @@ data class Flight(
     val departure_airport: DepartureAirport,
     val duration: Int,
     val flight_number: String,
-    val travel_class: String
+    val travel_class: String,
+    val price: Int
 )
