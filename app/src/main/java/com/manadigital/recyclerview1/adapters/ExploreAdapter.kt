@@ -21,7 +21,7 @@ class ExploreAdapter(private val destinations: List<Destination>, private val on
         val destination = destinations[position]
         holder.bind(destination)
         holder.getCardLayout().setOnClickListener{
-            onItemClickListener.navOnClickTrending("5D4N")
+            onItemClickListener.navOnClickTrending()
         }
     }
 
