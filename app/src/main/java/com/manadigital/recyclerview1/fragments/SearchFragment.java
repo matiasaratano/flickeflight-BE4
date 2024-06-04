@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,10 +20,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.manadigital.recyclerview1.R;
 import com.manadigital.recyclerview1.adapters.OfferSimpleAdapter;
 import com.manadigital.recyclerview1.entities.OfferSimple;
+import com.manadigital.recyclerview1.listener.OnItemNavClickedListener;
 
 import java.util.ArrayList;
 
-public class SearchFragment extends Fragment {
+public class SearchFragment extends Fragment implements OnItemNavClickedListener {
 
     RecyclerView rv;
     ArrayList<OfferSimple> dataSource;
@@ -46,7 +48,7 @@ public class SearchFragment extends Fragment {
         dataSource.add(new OfferSimple("25% de descuento con tus tarjetas Visa", R.drawable.visa));
 
         linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
-        adapter = new OfferSimpleAdapter(dataSource);
+        adapter = new OfferSimpleAdapter(dataSource,this);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(adapter);
         searchButton.setOnClickListener(new View.OnClickListener() {
@@ -84,5 +86,11 @@ public class SearchFragment extends Fragment {
         TextView toolbarTitle = toolbar.findViewById(R.id.toolbar_title);
         ImageView puntitos = toolbar.findViewById(R.id.more_vert);
 
+    }
+
+    @Override
+    public void navOnClick() {
+        NavController navController = Navigation.findNavController(getView());
+        navController.navigate(R.id.action_bottom_bar_search_to_bottom_bar_offers);
     }
 }
