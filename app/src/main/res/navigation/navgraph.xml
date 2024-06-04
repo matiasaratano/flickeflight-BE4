@@ -12,7 +12,7 @@
     <fragment
         android:id="@+id/bottom_bar_explore"
         android:name="com.manadigital.recyclerview1.fragments.ExploreFragment"
-        android:label="PruebaFragment"
+        android:label="Explore Fragment"
         tools:layout="@layout/fragment_explore">
         <action
             android:id="@+id/action_bottom_bar_explore_to_boracayFragment"
