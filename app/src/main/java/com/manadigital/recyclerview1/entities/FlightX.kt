@@ -1,6 +1,6 @@
 package com.manadigital.recyclerview1.entities
 
-data class Flight(
+data class FlightX(
     val airline: String,
     val airline_logo: String,
     val airplane: String,
@@ -8,6 +8,5 @@ data class Flight(
     val departure_airport: DepartureAirport,
     val duration: Int,
     val flight_number: String,
-    val travel_class: String,
-    val price: Int
+    val travel_class: String
 )

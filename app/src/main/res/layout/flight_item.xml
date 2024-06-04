@@ -57,8 +57,7 @@
             android:textColor="#191919"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@id/flight_date"
-            tools:layout_constraintStart_toStartOf="@id/flight_date"
-             />
+            app:layout_constraintStart_toStartOf="@id/flight_date"/>
 
         <TextView
             android:id="@+id/arrival_airport_id"
@@ -105,11 +104,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="343dp"
-        android:layout_height="233dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -142,7 +139,6 @@
                 android:textColor="#7E8B97"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="@+id/departure_airport"
-                app:layout_constraintStart_toEndOf="@id/arrival_airport"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
@@ -179,7 +175,8 @@
                 android:layout_marginEnd="25dp"
                 android:src="@drawable/plane"
                 app:layout_constraintBottom_toBottomOf="@id/arrival_airport"
-                app:layout_constraintEnd_toStartOf="@+id/arrival_airport" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/arrival_airport"
@@ -206,7 +203,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/departure_airport_id2"
+                android:id="@+id/arrival_airport_id2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
@@ -218,10 +215,9 @@
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@id/arrival_airport"
                 app:layout_constraintEnd_toEndOf="parent" />
-            <!-- cambio de ids porqeu estaban repetidos departure_airport_id2 y arrival_airport_id2 VER  COMO SOLUCIONARLO!-->
 
             <TextView
-                android:id="@+id/arrival_airport_id2"
+                android:id="@+id/departure_airport_id2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
