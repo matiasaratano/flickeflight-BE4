@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
@@ -39,6 +42,20 @@ class ExploreFragment : Fragment(), OnItemNavClickedListener , TrendingDestinati
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // Obtener la referencia a la toolbar en el MainActivity
+        val toolbar = activity?.findViewById<Toolbar>(R.id.toolbar)
+
+        // Obtener las referencias a los elementos dentro de la toolbar
+        val toolbarTitle = toolbar?.findViewById<TextView>(R.id.toolbar_title)
+        val imagenLogo = toolbar?.findViewById<ImageView>(R.id.imagen_logo)
+        val puntitos = toolbar?.findViewById<ImageView>(R.id.more_vert)
+        val profileImage = toolbar?.findViewById<ImageView>(R.id.toolbar_profile_image)
+        // Establecer la visibilidad según sea necesario
+        toolbarTitle?.visibility = View.GONE
+        puntitos?.visibility = View.GONE
+        imagenLogo?.visibility = View.VISIBLE
+        profileImage?.visibility = View.VISIBLE
+
 
         // Setup Trending Destinations RecyclerView
         trendingDestinationsRecyclerView = viewRoot.findViewById(R.id.recyclerViewTrendingDestinations)
@@ -61,6 +78,22 @@ class ExploreFragment : Fragment(), OnItemNavClickedListener , TrendingDestinati
         val offersAdapter = OfferSimpleAdapter(offers,this)
         offersRecyclerView.adapter = offersAdapter
         offersRecyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+
+        // Restaurar la visibilidad de los elementos cuando el fragmento ya no esté visible
+        val toolbar = activity?.findViewById<Toolbar>(R.id.toolbar)
+        val toolbarTitle = toolbar?.findViewById<TextView>(R.id.toolbar_title)
+        val imagenLogo = toolbar?.findViewById<ImageView>(R.id.imagen_logo)
+        val puntitos = toolbar?.findViewById<ImageView>(R.id.more_vert)
+        val profileImage = toolbar?.findViewById<ImageView>(R.id.toolbar_profile_image)
+
+        toolbarTitle?.visibility = View.VISIBLE
+        imagenLogo?.visibility = View.GONE
+        profileImage?.visibility = View.GONE
+        puntitos?.visibility = View.VISIBLE
+
     }
 
     override fun navOnClick() {
