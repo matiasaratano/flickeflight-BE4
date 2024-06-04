@@ -3,7 +3,7 @@ package com.manadigital.recyclerview1.listener
 import com.manadigital.recyclerview1.entities.OfferSimple
 
 
-interface SearchResultOnClick {
+interface TrendingDestinationNav {
 
-    fun navOnClick(string :String)
+    fun navOnClickTrending(string:String)
 }

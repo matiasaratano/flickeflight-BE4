@@ -7,10 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.manadigital.recyclerview1.R
 import com.manadigital.recyclerview1.adapters.FlightAdapter
+import com.manadigital.recyclerview1.entities.BestFlight
+import com.manadigital.recyclerview1.entities.Flight
 import com.manadigital.recyclerview1.entities.FlightsModels
 import com.manadigital.recyclerview1.listener.SearchResultOnClick
 import com.manadigital.recyclerview1.network.ActivityServiceApiBuilder
@@ -24,6 +27,7 @@ class FlightFragment : Fragment(), SearchResultOnClick {
     private lateinit var viewAdapter: FlightAdapter
     private lateinit var viewManager: RecyclerView.LayoutManager
     private lateinit var view : View
+    private lateinit var flights : List<BestFlight>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,6 +57,7 @@ class FlightFragment : Fragment(), SearchResultOnClick {
             override fun onResponse(call: Call<FlightsModels>, response: Response<FlightsModels>) {
                 if (response.isSuccessful) {
                     val flightsResponse = response.body()
+                    flights = flightsResponse?.best_flights!!
                     // Actualiza el adaptador con los vuelos obtenidos de la respuesta
                     viewAdapter.updateData(flightsResponse?.best_flights?.flatMap { it.flights } ?: emptyList())
                 } else {
@@ -68,7 +73,7 @@ class FlightFragment : Fragment(), SearchResultOnClick {
             }
         })
     }
-    override fun navOnClick() {
-        Navigation.findNavController(view).navigate(R.id.action_flightFragment_to_boracayFragment)
+    override fun navOnClick(string : String) {
+        view.findNavController().navigate(FlightFragmentDirections.actionFlightFragmentToBoracayFragment(string))
     }
 }

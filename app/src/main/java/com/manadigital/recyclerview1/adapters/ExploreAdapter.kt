@@ -6,8 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.manadigital.recyclerview1.R
 import com.manadigital.recyclerview1.entities.Destination
 import com.manadigital.recyclerview1.holders.ExploreHolder
+import com.manadigital.recyclerview1.listener.SearchResultOnClick
+import com.manadigital.recyclerview1.listener.TrendingDestinationNav
 
-class ExploreAdapter(private val destinations: List<Destination>) :
+class ExploreAdapter(private val destinations: List<Destination>, private val onItemClickListener : TrendingDestinationNav) :
     RecyclerView.Adapter<ExploreHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExploreHolder {
         val view = LayoutInflater.from(parent.context)
@@ -18,6 +20,9 @@ class ExploreAdapter(private val destinations: List<Destination>) :
     override fun onBindViewHolder(holder: ExploreHolder, position: Int) {
         val destination = destinations[position]
         holder.bind(destination)
+        holder.getCardLayout().setOnClickListener{
+            onItemClickListener.navOnClickTrending("5D4N")
+        }
     }
 
     override fun getItemCount(): Int {
