@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.manadigital.recyclerview1.R
@@ -12,8 +13,9 @@ import com.manadigital.recyclerview1.adapters.ExploreAdapter
 import com.manadigital.recyclerview1.adapters.OfferSimpleAdapter
 import com.manadigital.recyclerview1.entities.Destination
 import com.manadigital.recyclerview1.entities.OfferSimple
+import com.manadigital.recyclerview1.listener.OnItemNavClickedListener
 
-class ExploreFragment : Fragment() {
+class ExploreFragment : Fragment(), OnItemNavClickedListener {
     private lateinit var viewRoot: View
     private lateinit var trendingDestinationsRecyclerView: RecyclerView
     private lateinit var offersRecyclerView: RecyclerView
@@ -54,8 +56,12 @@ class ExploreFragment : Fragment() {
             OfferSimple("20% de descuento para usuarios de Mastercard", R.drawable.mastercard),
             OfferSimple("25% de descuento con tus tarjetas Visa", R.drawable.visa)
         )
-        val offersAdapter = OfferSimpleAdapter(offers)
+        val offersAdapter = OfferSimpleAdapter(offers,this)
         offersRecyclerView.adapter = offersAdapter
         offersRecyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+    }
+
+    override fun navOnClick() {
+        Navigation.findNavController(viewRoot).navigate(R.id.action_bottom_bar_explore_to_bottom_bar_offers)
     }
 }

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navgraph"
-    app:startDestination="@id/bottom_bar_offers">
+    app:startDestination="@+id/bottom_bar_explore">
     <fragment
         android:id="@+id/bottom_bar_offers"
         android:name="com.manadigital.recyclerview1.fragments.OfferFragment"
@@ -17,7 +17,7 @@
         <action
             android:id="@+id/action_bottom_bar_explore_to_bottom_bar_offers"
             app:destination="@id/bottom_bar_offers" />
-    </fragment>
+
 
     <fragment
         android:id="@+id/bottom_bar_profile"
