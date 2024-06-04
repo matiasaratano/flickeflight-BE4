@@ -64,5 +64,9 @@
     <string name="offers_label">Offers</string>
     <string name="logo">logo</string>
     <string name="departure_date">Departure Date</string>
+    <string name="profile">Profile</string>
+    <string name="notifications">Notifications</string>
+    <string name="get_help">Get Help</string>
+    <string name="calendar">Calendar</string>
 
 </resources>
