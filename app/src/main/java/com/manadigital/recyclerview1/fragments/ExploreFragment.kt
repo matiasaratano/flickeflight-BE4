@@ -100,7 +100,7 @@ class ExploreFragment : Fragment(), OnItemNavClickedListener , TrendingDestinati
         Navigation.findNavController(viewRoot).navigate(R.id.action_bottom_bar_explore_to_bottom_bar_offers)
     }
 
-    override fun navOnClickTrending(string : String) {
-        viewRoot.findNavController().navigate(ExploreFragmentDirections.actionBottomBarExploreToBoracayFragment(string))
+    override fun navOnClickTrending() {
+        Navigation.findNavController(viewRoot).navigate(R.id.action_bottom_bar_explore_to_boracayFragment)
     }
 }

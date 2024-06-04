@@ -5,5 +5,5 @@ import com.manadigital.recyclerview1.entities.OfferSimple
 
 interface TrendingDestinationNav {
 
-    fun navOnClickTrending(string:String)
+    fun navOnClickTrending()
 }

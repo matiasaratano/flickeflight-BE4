@@ -17,9 +17,6 @@
         <action
             android:id="@+id/action_bottom_bar_explore_to_boracayFragment"
             app:destination="@id/boracayFragment">
-        <argument
-            android:name="flightCode"
-            app:argType="string" />
     </action>
         <action
             android:id="@+id/action_bottom_bar_explore_to_bottom_bar_offers"
@@ -71,6 +68,7 @@
         tools:layout="@layout/fragment_boracay" >
         <argument
             android:name="flightCode"
-            app:argType="string" />
+            app:argType="string"
+            android:defaultValue="5DN4" />
     </fragment>
 </navigation>
