@@ -3,14 +3,16 @@ package com.manadigital.recyclerview1.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.manadigital.recyclerview1.R
 import com.manadigital.recyclerview1.entities.Flight
+import com.manadigital.recyclerview1.listener.SearchResultOnClick
 import com.squareup.picasso.Picasso
 
-class FlightAdapter(private var flightList: List<Flight>) :
+class FlightAdapter(private var flightList: List<Flight>, private val onItemClickListener : SearchResultOnClick) :
     RecyclerView.Adapter<FlightAdapter.FlightViewHolder>() {
 
     private val airportNameMap = mapOf(
@@ -52,7 +54,9 @@ class FlightAdapter(private var flightList: List<Flight>) :
         holder.view.findViewById<TextView>(R.id.departure_airport_id).text =
             flight.departure_airport.id
         holder.view.findViewById<TextView>(R.id.arrival_airport_id).text = flight.arrival_airport.id
-
+        holder.view.findViewById<Button>(R.id.book_button).setOnClickListener{
+            onItemClickListener.navOnClick()
+        }
         val imageView = holder.view.findViewById<ImageView>(R.id.airline_logo)
         Picasso.get().load(flight.airline_logo).into(imageView)
 
