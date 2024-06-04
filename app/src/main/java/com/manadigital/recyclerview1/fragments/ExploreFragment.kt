@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.manadigital.recyclerview1.R
@@ -14,8 +15,9 @@ import com.manadigital.recyclerview1.adapters.OfferSimpleAdapter
 import com.manadigital.recyclerview1.entities.Destination
 import com.manadigital.recyclerview1.entities.OfferSimple
 import com.manadigital.recyclerview1.listener.OnItemNavClickedListener
+import com.manadigital.recyclerview1.listener.TrendingDestinationNav
 
-class ExploreFragment : Fragment(), OnItemNavClickedListener {
+class ExploreFragment : Fragment(), OnItemNavClickedListener , TrendingDestinationNav{
     private lateinit var viewRoot: View
     private lateinit var trendingDestinationsRecyclerView: RecyclerView
     private lateinit var offersRecyclerView: RecyclerView
@@ -46,7 +48,7 @@ class ExploreFragment : Fragment(), OnItemNavClickedListener {
             Destination(R.drawable.d_bali, "Bali", "Indonesia", R.drawable.diasboracay),
             Destination(R.drawable.d_palawan, "Palawan", "Philippines", R.drawable.diasboracay)
         )
-        val trendingDestinationsAdapter = ExploreAdapter(destinations)
+        val trendingDestinationsAdapter = ExploreAdapter(destinations,this)
         trendingDestinationsRecyclerView.adapter = trendingDestinationsAdapter
         trendingDestinationsRecyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
@@ -63,5 +65,9 @@ class ExploreFragment : Fragment(), OnItemNavClickedListener {
 
     override fun navOnClick() {
         Navigation.findNavController(viewRoot).navigate(R.id.action_bottom_bar_explore_to_bottom_bar_offers)
+    }
+
+    override fun navOnClickTrending(string : String) {
+        viewRoot.findNavController().navigate(ExploreFragmentDirections.actionBottomBarExploreToBoracayFragment(string))
     }
 }

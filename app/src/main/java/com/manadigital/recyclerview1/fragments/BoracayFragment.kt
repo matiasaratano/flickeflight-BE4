@@ -17,6 +17,8 @@ class BoracayFragment : Fragment() {
     private lateinit var vista: View
     private lateinit var imageCarousel: RecyclerView
     private lateinit var images: List<BoracayImage>
+    private lateinit var params : String
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,5 +55,10 @@ class BoracayFragment : Fragment() {
         imageCarousel.adapter = adapter
         imageCarousel.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        params = BoracayFragmentArgs.fromBundle(requireArguments()).flightCode
     }
 }

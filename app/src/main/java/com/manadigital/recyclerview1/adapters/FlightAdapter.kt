@@ -55,7 +55,7 @@ class FlightAdapter(private var flightList: List<Flight>, private val onItemClic
             flight.departure_airport.id
         holder.view.findViewById<TextView>(R.id.arrival_airport_id).text = flight.arrival_airport.id
         holder.view.findViewById<Button>(R.id.book_button).setOnClickListener{
-            onItemClickListener.navOnClick()
+            onItemClickListener.navOnClick(flight.flight_number)
         }
         val imageView = holder.view.findViewById<ImageView>(R.id.airline_logo)
         Picasso.get().load(flight.airline_logo).into(imageView)
